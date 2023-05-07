@@ -1,9 +1,9 @@
-import UserModel from "../4-models/user-model";
+import UserModel from "../../4-models/user-model";
 import { Request } from "express";
 import jwt from "jsonwebtoken"
 import jwtDecode from "jwt-decode"
-import { ForbiddenError, UnauthorizedError } from "../4-models/errors-model";
-import Role from "../4-models/Role-model";
+import { ForbiddenError, UnauthorizedError } from "../../4-models/errors-model";
+import Role from "../../4-models/Role-model";
 import crypto from "crypto"
 
 const salt = process.env.HASH_SALT

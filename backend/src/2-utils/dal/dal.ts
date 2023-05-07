@@ -1,5 +1,5 @@
 import { DataSource, DataSourceOptions, EntityTarget, ObjectLiteral } from "typeorm";
-import config from "../config";
+import config from "../configuration/config";
 import { Company } from "../entities/company-entity";
 import { User } from "../entities/user-entity";
 // import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";

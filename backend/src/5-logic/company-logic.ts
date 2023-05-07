@@ -2,7 +2,7 @@ import { InsertResult } from "typeorm";
 import { companyDal } from "../2-utils/dal/company-dal";
 import { Company } from "../2-utils/entities/company-entity";
 import CompanyModel from "../4-models/company-model";
-import { ValidationError } from "../4-models/errors-model";
+import { ResourceNotFoundError, ValidationError } from "../4-models/errors-model";
 
 // Add company
 async function addCompany(company: CompanyModel): Promise<CompanyModel> {
@@ -31,6 +31,25 @@ async function addCompany(company: CompanyModel): Promise<CompanyModel> {
   }
 }
 
+// Get one company by id:
+async function getCompanyById(id:number): Promise<CompanyModel>{
+
+    
+//   const result: InsertResult = await companyDal 
+
+//   if(!result){
+//     throw new ResourceNotFoundError(id)
+//   }
+    return
+}
+
+// Get all company:
+async function getAllCompany(): Promise<CompanyModel[]>{
+
+    
+
+      return
+  }
 
 export default {
     addCompany

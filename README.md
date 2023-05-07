@@ -10,7 +10,6 @@ The refresh token is a long-lived token that can be used to obtain new ID tokens
 * **CLI - Check connection status to dataBase**
 
 
-
 ## Methods
 
 | Controllers         | |   Method            |  Credentials                     |                             

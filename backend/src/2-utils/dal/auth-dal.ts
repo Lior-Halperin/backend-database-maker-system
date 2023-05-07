@@ -1,6 +1,6 @@
 import {EntityTarget, ObjectLiteral } from "typeorm";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import authClient from "../firebase-client";
+import authClient from "../configuration/firebase-client";
 import { propertyForbiddenToAdd } from "../types/property-forbidden-auth-type";
 import dal from "./dal";
 

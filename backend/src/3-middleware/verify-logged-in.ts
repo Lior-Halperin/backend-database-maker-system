@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
-import cyber from "../2-utils/cyber";
-import firebaseAdmin from "../2-utils/firebase-admin";
-import authClient from "../2-utils/firebase-client";
+import cyber from "../2-utils/configuration/cyber";
+import firebaseAdmin from "../2-utils/configuration/firebase-admin";
+import authClient from "../2-utils/configuration/firebase-client";
 import UserModel from "../4-models/user-model";
 
 async function verifyLoggedIn(request: Request, response: Response, next: NextFunction) {

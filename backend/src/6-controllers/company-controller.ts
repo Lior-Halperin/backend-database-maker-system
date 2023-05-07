@@ -8,7 +8,7 @@ import logic from "../5-logic/company-logic";
   const router = express.Router();
 
   // POST http://localhost:3002/api/company
-router.post("/company",verifyLoggedIn,verifyAccess, async (request: Request, response: Response, next: NextFunction) => {
+    router.post("/company",verifyLoggedIn,verifyAccess, async (request: Request, response: Response, next: NextFunction) => {
     try{
         
         //  Create company object
@@ -24,6 +24,25 @@ router.post("/company",verifyLoggedIn,verifyAccess, async (request: Request, res
         next(err)
     }
 });
+
+  // GET http://localhost:3002/api/company
+  router.get("/company/:id",verifyLoggedIn,verifyAccess, async (request: Request, response: Response, next: NextFunction) => {
+    try{
+
+        //  
+        const id = request.params.id
+
+        // 
+        const company = await logic.addCompany(id);
+
+        // Return new company 
+        response.status(200).json(company)
+    }
+    catch(err: any){
+        next(err)
+    }
+});
+
 
 // Export all routes from this controller. 
 export default router;

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import cyber from "../2-utils/cyber";
+import cyber from "../2-utils/configuration/cyber";
 import { ForbiddenError} from "../4-models/errors-model";
 import Role from "../4-models/Role-model";
 import UserModel from "../4-models/user-model";

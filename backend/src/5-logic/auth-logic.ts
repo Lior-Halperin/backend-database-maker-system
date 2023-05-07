@@ -1,13 +1,11 @@
 
-import cyber from "../2-utils/cyber";
+import cyber from "../2-utils/configuration/cyber";
 import CredentialsModel from "../4-models/credentials-model";
 import { UnauthorizedError, ValidationError } from "../4-models/errors-model";
 import UserModel from "../4-models/user-model";
 import { User } from "../2-utils/entities/user-entity";
-import dal from "../2-utils/dal/dal";
 import { propertyForbiddenToAdd } from "../2-utils/types/property-forbidden-auth-type";
 import { authDal } from "../2-utils/dal/auth-dal";
-// import authDal from "../2-utils/dal/auth-dal";
 
 
 

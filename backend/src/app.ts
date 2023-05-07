@@ -1,12 +1,14 @@
-
 import express, { NextFunction, Request, Response } from 'express';
 import cors from "cors";
-import config from './2-utils/config';
+import config from './2-utils/configuration/config';
 import { RouteNotFoundError } from './4-models/errors-model';
 import catchAll from './3-middleware/catch-all';
 import authController from './6-controllers/auth-controller';
 import companyController from './6-controllers/company-controller'
 import dal from './2-utils/dal/dal';
+import swaggerUi from 'swagger-ui-express';
+import * as swaggerDocument from './swagger.json';
+
 const expressServer = express();
 
 //  Backend approval to browse AJAX to backend API
@@ -15,7 +17,7 @@ if (process.env.NODE_ENV === "development") expressServer.use(cors());
 
 // Tell express to extract json object from request body into request.body variable:
 expressServer.use(express.json());
-
+expressServer.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocument))
 expressServer.use("/api",authController);
 expressServer.use("/api",companyController);
 
